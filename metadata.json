@@ -1,0 +1,5 @@
+{
+  "name": "ETHERCHESS AI",
+  "description": "A modern, liquid-glass styled chess platform powered by Stockfish 18 AI for real-time analysis, featuring TON wallet integration simulations.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,56 @@
+
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "users": {
+      ".read": true,
+      "$userId": {
+        ".write": true
+      },
+      ".indexOn": ["rating", "lastActive", "username", "telegramId", "photoUrl", "isOnline", "walletAddress", "isBanned"]
+    },
+    "games": {
+      ".read": true,
+      "$gameId": {
+        ".write": true
+      },
+      ".indexOn": ["whitePlayer", "blackPlayer", "createdAt", "winner"]
+    },
+    "active_games": {
+      ".read": true,
+      "$gameId": {
+        ".write": true
+      },
+      ".indexOn": ["status", "createdAt", "whitePlayer", "blackPlayer"]
+    },
+    "challenges": {
+      ".read": true,
+      "$challengeId": {
+        ".write": true
+      },
+      ".indexOn": ["to", "from", "status", "type", "createdAt"]
+    },
+    "matchmaking": {
+      ".read": true,
+      "$userId": {
+        ".write": true
+      },
+      ".indexOn": ["joinedAt", "rating", "timeControl"]
+    },
+    "lobby_chat": {
+      ".read": true,
+      "$messageId": {
+        ".write": true
+      },
+      ".indexOn": ["timestamp"]
+    },
+    "tournaments": {
+      ".read": true,
+      "$tournamentId": {
+        ".write": true
+      },
+      ".indexOn": ["status"]
+    }
+  }
+}
